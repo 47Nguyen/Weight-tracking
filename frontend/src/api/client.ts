@@ -1,4 +1,5 @@
 const TOKEN_KEY = "wt_token";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 export function getToken(): string | null {
   return localStorage.getItem(TOKEN_KEY);
@@ -32,7 +33,7 @@ export async function apiFetch<T>(
     const t = getToken();
     if (t) headers.set("Authorization", `Bearer ${t}`);
   }
-  const res = await fetch(path, {
+  const res = await fetch(`${API_BASE_URL}${path}`, {
     ...opts,
     headers,
     body: opts.json !== undefined ? JSON.stringify(opts.json) : opts.body,
@@ -46,7 +47,7 @@ export async function loginRequest(username: string, password: string): Promise<
   const body = new URLSearchParams();
   body.set("username", username);
   body.set("password", password);
-  const res = await fetch("/api/auth/token", {
+  const res = await fetch(`${API_BASE_URL}/api/auth/token`, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body,
