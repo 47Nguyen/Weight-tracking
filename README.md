@@ -1,6 +1,7 @@
 # Weight Tracker (full stack)
 
-Personal weight logging with a target weight, JWT username/password auth, and a **scenario comparison** tool (gender, age, exercise level) that ranks rough metabolic “routes” using the Mifflin–St Jeor estimate plus activity factors — for insight only, not medical advice.
+Tryt out here: https://weight-tracking-vml5.onrender.com
+
 
 # Note 
 This project was fully created using cursor as a personal projects. 
