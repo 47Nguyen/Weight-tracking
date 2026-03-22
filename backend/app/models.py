@@ -10,7 +10,7 @@ from app.database import Base
 
 
 def _utc_now() -> datetime:
-    """Insert default: SQLAlchemy calls this once per row on INSERT (not at import time)."""
+    """SQLAlchemy `default=` callables are invoked on each INSERT (unlike `default=func()` at define time)."""
     return datetime.now(timezone.utc)
 
 
