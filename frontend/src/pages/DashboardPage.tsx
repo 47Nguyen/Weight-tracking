@@ -27,7 +27,7 @@ function todayISODate() {
 export function DashboardPage() {
   const [entries, setEntries] = useState<WeightEntry[]>([]);
   const [profile, setProfile] = useState<Profile | null>(null);
-  const [date, setDate] = useState(todayISODate);
+  const [date, setDate] = useState(() => todayISODate());
   const [weight, setWeight] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
   const [err, setErr] = useState<string | null>(null);
