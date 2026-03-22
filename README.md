@@ -2,6 +2,9 @@
 
 Personal weight logging with a target weight, JWT username/password auth, and a **scenario comparison** tool (gender, age, exercise level) that ranks rough metabolic “routes” using the Mifflin–St Jeor estimate plus activity factors — for insight only, not medical advice.
 
+# Note 
+This project was fully created using cursor as a personal projects. 
+
 ## Stack
 
 - **Backend:** Python, FastAPI, SQLAlchemy, SQLite (`backend/weight_tracker.db`), bcrypt passwords, JWT access tokens.
@@ -37,4 +40,4 @@ Open [http://localhost:5173](http://localhost:5173). The Vite dev server proxies
 cd frontend && npm run build
 ```
 
-Serve `frontend/dist` with any static host and point API requests to your deployed FastAPI URL (update CORS in `backend/app/main.py` and the frontend `fetch` base URL as needed).
+Serve `frontend/dist` with any static host and point API requests to your deployed FastAPI URL (update CORS in `backend/app/main.py` and the frontend `fetch` base URL as needed).#
